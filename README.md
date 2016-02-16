@@ -16,3 +16,24 @@ puts "a lot "
 
 puts "If I am 1246 million seconds old, how old am I?"
 puts 1246000000/60/60/24/365
+
+#Chapter 2 ćw
+puts 'Hello, world!'
+puts ''
+puts 'Good-bye.'
+
+puts 'I like' + 'apple pie.'
+
+puts  12  +  12
+puts '12' + '12'
+puts '12  +  12'
+
+puts  2  *  5
+puts '2 ' *  5
+puts '2  *  5'
+
+puts 'You\'re swell!'
+
+puts 'backslash at the end of a string:  \\'
+puts 'up\\down'
+puts 'up\down'
