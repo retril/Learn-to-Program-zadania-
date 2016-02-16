@@ -1,5 +1,5 @@
 # Learn-to-Program-zadania-
-# Chapter 1
+# Chapter 1 zadania
 puts "I year are" 
 puts 365*24 
 puts "hours"
