@@ -73,7 +73,7 @@ puts var2
 
 #Chapter 4
 puts 'Hello ,What is your name?'
-name = gets
+name = gets.chomp
 puts 'Okay and your surname?'
 names=gets
 puts 'Hello ,my friend '+name+' '+names
