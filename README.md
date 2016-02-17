@@ -93,3 +93,24 @@ puts 'Table of Contents'.center space
 puts 'Chapter 1:  Numbers'.ljust(space/2) + 'page 1'.rjust(space/2)
 puts 'Chapter 2:  Letters'.ljust(space/2) + 'page 72'.rjust(space/2)
 puts 'Chapter 3:  Variables '.ljust(space/2) + 'page 118'.rjust(space/2)
+
+#Chapter 6
+beers = 99
+beer = beers	
+while beers > 0 
+	if beers == 1
+		puts beers.to_s+' bottles of beer on the wall, '+beers.to_s+' bottles of beer.'
+		beers = 'no more'
+		puts 'Take one down and pass it around, '+beers+' bottles of beer on the wall.'
+		beers = 0
+	else
+		puts beers.to_s+' bottles of beer on the wall, '+beers.to_s+' bottles of beer.'
+		beers = beers-1
+		puts 'Take one down and pass it around, '+beers.to_s+' bottles of beer on the wall.' 
+	end
+	puts
+end
+beers = 'no more'
+puts beers.capitalize+' bottles of beer on the wall, '+beers.to_s+' bottles of beer. 
+Go to the store and buy some more, '+beer.to_s+' bottles of beer on the wall.'	
+
