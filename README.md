@@ -70,3 +70,15 @@ puts ''
 var1 = 'eight'
 puts var1
 puts var2
+
+#Chapter 4
+puts 'Hello ,What is your name?'
+name = gets
+puts 'Okay and your surname?'
+names=gets
+puts 'Hello ,my friend '+name+' '+names
+
+puts 'What is your favourite number'
+number = gets
+number = number.to_i+1
+puts 'The number is bigger and better than your favourite number '+number.to_s
