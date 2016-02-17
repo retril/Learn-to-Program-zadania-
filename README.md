@@ -82,3 +82,14 @@ puts 'What is your favourite number'
 number = gets
 number = number.to_i+1
 puts 'The number is bigger and better than your favourite number '+number.to_s
+
+#Chapter 5 zadania
+puts 'WHAT YOU WANT ?'
+want = gets.chomp
+puts 'WHADDAYA MEAN "'+want.upcase+'"?!?  YOU\'RE FIRED!!'
+
+space = 50.5
+puts 'Table of Contents'.center space
+puts 'Chapter 1:  Numbers'.ljust(space/2) + 'page 1'.rjust(space/2)
+puts 'Chapter 2:  Letters'.ljust(space/2) + 'page 72'.rjust(space/2)
+puts 'Chapter 3:  Variables '.ljust(space/2) + 'page 118'.rjust(space/2)
