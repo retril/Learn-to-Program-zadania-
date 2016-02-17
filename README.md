@@ -38,7 +38,7 @@ puts 'backslash at the end of a string:  \\'
 puts 'up\\down'
 puts 'up\down'
 
-#Chapter 3
+#Chapter 3 ćw
 puts '...you can say that again...'
 
 myString = '...you can say that again...'
@@ -71,7 +71,7 @@ var1 = 'eight'
 puts var1
 puts var2
 
-#Chapter 4
+#Chapter 4 zadania
 puts 'Hello ,What is your name?'
 name = gets.chomp
 puts 'Okay and your surname?'
