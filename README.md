@@ -114,3 +114,20 @@ beers = 'no more'
 puts beers.capitalize+' bottles of beer on the wall, '+beers.to_s+' bottles of beer. 
 Go to the store and buy some more, '+beer.to_s+' bottles of beer on the wall.'	
 
+say = gets.chomp
+while say != 'BYE'
+	if say == say.upcase
+		t = (rand(1951))
+		while t <= 1930
+			t = (rand(1951))
+		end
+		puts 'NO, NOT SINCE '+t.to_s+'!'
+		puts 'ANYTHING ELSE!?'
+		say = gets.chomp
+	else
+		puts 'HUH?!  SPEAK UP, SONNY!'	
+		say = gets.chomp
+	end
+	puts 
+end
+puts 'BYE !'
