@@ -139,3 +139,34 @@ while n != 3
 end
 
 puts 'BYE !'
+
+puts 'Enter starting year.'
+year1=gets.chomp
+puts 'Enter ending year.'
+year2=gets.chomp
+if year2.to_f%4 == 0 and year2.to_f/100 != year2.to_i/100 
+		year2 = year2
+else if year2.to_f/400 == year2.to_i/400 
+			year2 = year2
+	else
+			x=year2.to_i%4
+			year2=year2.to_i-x	
+	end
+end	
+puts
+puts 'Leap-years beetwen those which You have entered'	
+while year1.to_f <= year2.to_f
+	if year1.to_i%4 == 0 and year1.to_f/100 != year1.to_i/100 
+		puts year1.to_i
+		year1=year1.to_i+4
+	else if year1.to_f/400 == year1.to_i/400 
+			puts year1.to_i
+			year1=year1.to_i+4
+		else
+			r=year1.to_i%4
+			r1=4-r
+			year1=year1.to_i+r1
+		end
+	end		
+end
+puts 'END'
