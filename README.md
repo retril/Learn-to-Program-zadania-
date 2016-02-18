@@ -94,7 +94,7 @@ puts 'Chapter 1:  Numbers'.ljust(space/2) + 'page 1'.rjust(space/2)
 puts 'Chapter 2:  Letters'.ljust(space/2) + 'page 72'.rjust(space/2)
 puts 'Chapter 3:  Variables '.ljust(space/2) + 'page 118'.rjust(space/2)
 
-#Chapter 6
+#Chapter 6 - zadania
 beers = 99
 beer = beers	
 while beers > 0 
@@ -115,8 +115,9 @@ puts beers.capitalize+' bottles of beer on the wall, '+beers.to_s+' bottles of b
 Go to the store and buy some more, '+beer.to_s+' bottles of beer on the wall.'	
 
 say = gets.chomp
-while say != 'BYE'
-	if say == say.upcase
+n = 0
+while n != 3
+	if say == say.upcase and say != 'BYE'
 		t = (rand(1951))
 		while t <= 1930
 			t = (rand(1951))
@@ -128,6 +129,13 @@ while say != 'BYE'
 		puts 'HUH?!  SPEAK UP, SONNY!'	
 		say = gets.chomp
 	end
-	puts 
+
+	if say == 'BYE'
+		n=(n+1)
+	else
+		n=0
+	end	
+
 end
+
 puts 'BYE !'
