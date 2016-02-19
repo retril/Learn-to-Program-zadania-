@@ -94,7 +94,7 @@ puts 'Chapter 1:  Numbers'.ljust(space/2) + 'page 1'.rjust(space/2)
 puts 'Chapter 2:  Letters'.ljust(space/2) + 'page 72'.rjust(space/2)
 puts 'Chapter 3:  Variables '.ljust(space/2) + 'page 118'.rjust(space/2)
 
-#Chapter 6 - zadania
+#Chapter 6 zadania
 beers = 99
 beer = beers	
 while beers > 0 
@@ -170,3 +170,14 @@ while year1.to_f <= year2.to_f
 	end		
 end
 puts 'END'
+
+#Chapter 7 zadania
+
+words = []
+say= gets.chomp
+while say != ''
+	words.push say
+	say= gets.chomp
+end	
+puts words.sort
+
