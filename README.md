@@ -181,6 +181,24 @@ while say != ''
 end	
 puts words.sort
 
+words = []
+say = gets.chomp
+while say != ''
+	temp = []
+	pushed = false
+	words.each do |x|
+		if say < x && !pushed then
+			temp.push say
+			pushed = true
+		end
+		temp.push x
+	end
+	temp.push say unless pushed
+	words = temp.clone
+	say = gets.chomp
+end
+puts words
+
 chapters = ['1.Numbers', '2.Letters', '3.Variables']
 pages = [1, 72, 118]
 space = 50.5 
@@ -190,7 +208,6 @@ chapters_full = []
 pages_full = []
 n = 0
 chapters.each do |ch| 
-	
 	chapters_full.push 'Chapter '+ ch 
 end
 pages.each do |p|
