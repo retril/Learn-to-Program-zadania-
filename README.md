@@ -181,3 +181,24 @@ while say != ''
 end	
 puts words.sort
 
+chapters = ['1.Numbers', '2.Letters', '3.Variables']
+pages = [1, 72, 118]
+space = 50.5 
+puts 'Table of Contents'.center space 
+puts
+chapters_full = []
+pages_full = []
+n = 0
+chapters.each do |ch| 
+	
+	chapters_full.push 'Chapter '+ ch 
+end
+pages.each do |p|
+	pages_full.push 'page '+ p.to_s
+
+end
+n=0
+pages_full.each do |pf|
+	puts chapters_full[n].ljust(space/2) + pf.rjust(space/2)
+	n=n+1
+end
