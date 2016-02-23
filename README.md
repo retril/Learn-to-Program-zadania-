@@ -187,13 +187,15 @@ while say != ''
 	temp = []
 	pushed = false
 	words.each do |x|
-		if say < x && !pushed then
+		if say < x and pushed == false
 			temp.push say
 			pushed = true
 		end
 		temp.push x
 	end
-	temp.push say unless pushed
+	if pushed == false
+		temp.push say 
+	end
 	words = temp.clone
 	say = gets.chomp
 end
