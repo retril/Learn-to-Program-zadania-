@@ -338,7 +338,7 @@ puts BeerSong(1000)
 born_time = Time.mktime(1997,10,25)
 time1b = born_time +1000000000
 puts born_time
-puts tiem1b
+puts time1b
 
 puts 'When were you born?(year)'
 y = gets.chomp
