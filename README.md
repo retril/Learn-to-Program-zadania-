@@ -309,3 +309,26 @@ end
 puts englishNumber(1000)
 puts englishNumber(10000)
 puts englishNumber(1000000)
+
+def BeerSong beers
+beer = beers
+
+while beers > 0 
+	if beers == 1
+		puts englishNumber(beers)+' bottles of beer on the wall, '+englishNumber(beers)+' bottles of beer.'
+		beers = 'no more'
+		puts 'Take one down and pass it around, '+beers+' bottles of beer on the wall.'
+		beers = 0
+	else
+		puts englishNumber(beers)+' bottles of beer on the wall, '+englishNumber(beers)+' bottles of beer.'
+		beers = beers-1
+		puts 'Take one down and pass it around, '+englishNumber(beers)+' bottles of beer on the wall.' 
+	end
+	puts
+end
+beers = 'no more'
+puts beers.capitalize+' bottles of beer on the wall, '+beers+' bottles of beer. 
+Go to the store and buy some more, '+englishNumber(beer)+' bottles of beer on the wall.'	
+end
+
+puts BeerSong(1000)
