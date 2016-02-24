@@ -332,3 +332,32 @@ Go to the store and buy some more, '+englishNumber(beer)+' bottles of beer on th
 end
 
 puts BeerSong(1000)
+
+#Chapter 9
+
+born_time = Time.mktime(1997,10,25)
+time1b = born_time +1000000000
+puts born_time
+puts tiem1b
+
+puts 'When were you born?(year)'
+y = gets.chomp
+puts 'When were you born?(month)'
+m = gets.chomp
+puts 'When were you born?(day)'
+d = gets.chomp
+born_time = Time.mktime(y.to_i,m.to_i,d.to_i)
+time = Time.new
+age = time - born_time
+age = age.to_i/60/60/24/365
+puts
+puts 'You are '+age.to_s+' years old.'
+
+def BirthdaySpank age
+	while age > 0
+		puts 'spank!'.capitalize
+		age = age -1
+	end
+end
+
+puts BirthdaySpank(age)
