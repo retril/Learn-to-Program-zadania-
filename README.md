@@ -241,6 +241,18 @@ def englishNumber number
                'sixteen', 'seventeen', 'eighteen', 'nineteen']
  
  left = number
+  write = left/1000000
+ left = left - write*1000000
+
+ if write > 0
+ 	milions = englishNumber write
+ 	numString = numString + milions + ' milion'
+	if left > 0
+		numString = numString + ' '
+	end	
+ end
+ 
+ 
  write = left/1000
  left = left - write*1000
  if write > 0
@@ -296,3 +308,4 @@ end
 
 puts englishNumber(1000)
 puts englishNumber(10000)
+puts englishNumber(1000000)
