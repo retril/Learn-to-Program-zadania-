@@ -361,3 +361,98 @@ def BirthdaySpank age
 end
 
 puts BirthdaySpank(age)
+
+class OrangeTree
+
+  def initialize 
+    puts 'You plant an orange tree.'
+    @age = 0
+    @height = 0
+    @heightA = 0
+    @oranges = 0
+    @endoftree = rand(6) + 8
+  end
+  
+  def height
+    if @age == 0
+     puts 'Your tree have '+ @height.to_s + ' meters.'
+    else
+      puts 'Your tree have '+ @height.to_s + ',' + @heightA.to_s + ' meters.'
+    end
+  end
+  
+  def oneYearPasses
+    if @age == 0 
+      puts 'Your tree was recently planted.'
+    else
+      if @age > 1
+        if @oranges > 0
+          if @oranges > 1 
+            puts 'You lost ' + @oranges.to_s + ' oranges.'
+            @oranges = 0
+            @oranges = ((rand(4) + 1)*@age) +rand(1)
+          else
+            puts 'You lost ' + @oranges.to_s + ' orange.'
+            @oranges = ((rand(4) + 1)*@age) +rand(1)
+          end
+        else
+          puts 'You pick up all oranges in this year.'
+          @oranges = ((rand(4) + 1)*@age) +rand(1)
+        end
+      else
+        @oranges = ((rand(4) + 1)*@age )+rand(1)
+      end
+    end
+
+    @age = @age +1
+    puts 'Your tree grows.' 
+    @heightA = rand(8) + 1
+    if @age == 1
+      @height = 0
+      @heightA = rand(5)+1
+      while @heightA < 4
+        @heightA = rand(5)+1
+      end
+    else 
+      if @height < 5 
+        @height = @height + 1
+        @heightA = rand(8)+1
+        while @heightA < 4
+          @heightA = rand(8)+1
+        end
+      else
+        puts 'Your tree can\'t grows more.'
+        puts 'Your tree\'s height don\'t change.'
+      end
+    end
+    if @age == @endoftree
+      puts 'Your tree dieing... ;('
+      puts '...Maybe plant new...'
+      puts 'Your tree was ' + @age.to_s + ' years.'
+      exit
+    end
+  end 
+  
+  def countTheOranges
+    if @oranges > 0
+      if @oranges > 1
+        puts 'Your tree has ' + @oranges.to_s + ' oranges.'
+      else
+        puts 'Your tree has last orange'
+      end  
+    else
+      puts  'Your tree has no more oranges' 
+    end
+  end 
+
+  
+  def pickAnOrange
+    if @oranges > 0
+      @oranges = @oranges - 1
+      puts 'This orange is so delicious'
+    else
+      puts 'Your tree has no more oranges'
+    end
+  end
+end  
+
