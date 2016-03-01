@@ -456,3 +456,158 @@ class OrangeTree
   end
 end  
 
+
+class Dragon
+
+  def initialize name
+    @name = name
+    @asleep = false
+    @stuffInBelly     = 10  
+    @stuffInIntestine =  0  
+
+    puts @name + ' is born.'
+  end
+
+  def feed
+    puts 'You feed ' + @name + '.'
+    @stuffInBelly = 10
+    passageOfTime
+  end
+
+  def walk
+    puts 'You walk ' + @name + '.'
+    @stuffInIntestine = 0
+    passageOfTime
+  end
+
+  def putToBed
+    puts 'You put ' + @name + ' to bed.'
+    @asleep = true
+    3.times do
+      if @asleep
+        passageOfTime
+      end
+      if @asleep
+        puts @name + ' snores, filling the room with smoke.'
+      end
+    end
+    if @asleep
+      @asleep = false
+      puts @name + ' wakes up slowly.'
+    end
+  end
+
+  def toss
+    puts 'You toss ' + @name + ' up into the air.'
+    puts 'He giggles, which singes your eyebrows.'
+    passageOfTime
+  end
+
+  def rock
+    puts 'You rock ' + @name + ' gently.'
+    @asleep = true
+    puts 'He briefly dozes off...'
+    passageOfTime
+    if @asleep
+      @asleep = false
+      puts '...but wakes when you stop.'
+    end
+  end
+
+  private
+
+  def hungry?
+    @stuffInBelly <= 2
+  end
+
+  def poopy?
+    @stuffInIntestine >= 8
+  end
+
+  def passageOfTime
+    if @stuffInBelly > 0
+      
+      @stuffInBelly     = @stuffInBelly     - 1
+      @stuffInIntestine = @stuffInIntestine + 1
+    else  
+      if @asleep
+        @asleep = false
+        puts 'He wakes up suddenly!'
+      end
+      puts @name + ' is starving!  In desperation, he ate YOU!'
+      dead = 1
+      exit 
+    end
+
+    if @stuffInIntestine >= 10
+      @stuffInIntestine = 0
+      puts 'Whoops!  ' + @name + ' had an accident...'
+    end
+
+    if hungry?
+      if @asleep
+        @asleep = false
+        puts 'He wakes up suddenly!'
+      end
+      puts @name + '\'s stomach grumbles...'
+    end
+
+    if poopy?
+      if @asleep
+        @asleep = false
+        puts 'He wakes up suddenly!'
+      end
+      puts @name + ' does the potty dance...'
+    end
+  end
+end
+puts 'Please chose name for your baby dragon'
+name = gets.chomp
+$pet =Dragon.new name.capitalize
+puts
+def talktodragon say 
+  if say.downcase == 'feed' or say.downcase == 'puttobed' or say.downcase == 'put to bed' or say.downcase == 'walk' or say.downcase == 'toss' or say.downcase == 'rock' or say.downcase == 'help'
+    if say.downcase == 'feed'
+      $pet.feed
+    end
+    if say.downcase == 'puttobed' or say.downcase == 'put to bed'
+      $pet.putToBed
+    end
+    if say.downcase == 'walk'
+      $pet.walk
+    end
+    if say.downcase == 'toss'
+      $pet.toss
+    end
+    if say.downcase == 'rock'
+      $pet.rock
+    end 
+    if say.downcase == 'help'
+      puts 'You can put this commands to your baby drgon:'
+      puts 'feed'
+      puts 'put to bed'
+      puts 'walk'
+      puts 'toss'
+      puts 'rock'
+    end
+  else
+    puts 'WRONG COMMAND!'
+  end
+end
+puts 'Let\'s interact with your baby dragon !'
+puts
+puts 'You can put this commands to your baby drgon:'
+puts 'feed'
+puts 'put to bed'
+puts 'walk'
+puts 'toss'
+puts 'rock'
+puts 'If you do not remember this write help'
+puts
+
+dead = 1
+while dead == 1
+  dead = 1
+  say = gets.chomp
+  talktodragon say
+end
